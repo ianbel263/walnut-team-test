@@ -1,0 +1,26 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  
+  &__content {
+      flex: 1 0 auto;
+  }
+  
+  &__footer {
+      flex: 0 0 auto;
+  }
+
+  &--modal_opened {
+    width: 100vw;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: $max_width_mobile) {
+  .wrapper {
+    &--modal_opened {
+      position: fixed;
+    }
+  }
+}
