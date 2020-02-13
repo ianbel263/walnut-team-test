@@ -38,7 +38,7 @@ module.exports = {
       },
       {
         // Fonts
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.woff(2)$/,
         loader: "file-loader",
         options: {
           name: "[name].[ext]"
@@ -54,7 +54,7 @@ module.exports = {
       },
       {
         // scss
-        test: /\.scss$/,
+        test: /\.s[ac]ss$/,
         use: [
           "style-loader",
           MiniCssExtractPlugin.loader,
