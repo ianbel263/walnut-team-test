@@ -6,9 +6,10 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const PATHS = {
   src: path.join(__dirname, "../src"),
-  dist: path.join(__dirname, "../dist"),
+  dist: path.join(__dirname, "../public"),
   assets: "assets/"
 };
+console.log('PATHS', PATHS)
 
 // Pages const for HtmlWebpackPlugin
 const PAGES_DIR = PATHS.src;
@@ -28,6 +29,18 @@ module.exports = {
     path: PATHS.dist,
     publicPath: "/"
   },
+  // optimization: {
+  //   splitChunks: {
+  //     cacheGroups: {
+  //       vendor: {
+  //         name: "vendors",
+  //         test: /node_modules/,
+  //         chunks: "all",
+  //         enforce: true
+  //       }
+  //     }
+  //   }
+  // },
   module: {
     rules: [
       {
@@ -62,16 +75,19 @@ module.exports = {
             loader: "css-loader",
             options: { sourceMap: true }
           },
-          {
-            loader: "postcss-loader",
-            options: {
-              sourceMap: true,
-              config: { path: `./postcss.config.js` }
-            }
-          },
+          // {
+          //   loader: "postcss-loader",
+          //   options: {
+          //     sourceMap: true,
+          //     config: { path: `./postcss.config.js` }
+          //   }
+          // },
           {
             loader: "sass-loader",
-            options: { sourceMap: true }
+            options: {
+              sourceMap: true,
+              // outputStyle: 'compressed',
+            }
           }
         ]
       },
