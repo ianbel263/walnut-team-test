@@ -3,11 +3,29 @@ $main_font: "Montserrat", Arial, sans-serif;
 
 // font colors
 $main_font_color: #000000;
+$main_title_bg_color: #ffe640;
 
 // bg colors
 $main_bg_color: #ffffff;
+$alternate_bg_color: #50b1d7;
 
 // other colors
+$index_page_wrapper_bg_color: #61484a;
+
+// links/buttons colors
+$link_color: $alternate_bg_color;
+$link_hover_color: $main_title_bg_color;
+
+//inputs colors
+$input_bg_color: rgba(255, 255, 255, 0.25);
+$input_phone_placeholder_color: rgba(255, 255, 255, 0.3);
+
+$input_hover_bg_color: rgba(255, 255, 255, 0.4);
+$input_hover_phone_placeholder_color: #ffffff;
+
+// shadows
+$text_shadow: 2.121px 2.121px 3px rgba(0, 0, 0, 0.5);
+$input_active_shadow: 0 0 12px rgba(80, 177, 215, 0.7);
 
 // others variables
 $transition: all 0.3s;
