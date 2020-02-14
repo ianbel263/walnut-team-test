@@ -6,3 +6,19 @@
   padding-left: 15px;
   padding-right: 15px;
 }
+
+@media(max-width: $max_width_tablet) {
+  .container {
+    max-width: none;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media(max-width: $max_width_mobile) {
+  .container {
+    min-width: 290px;
+    max-width: 80%;
+    padding: 0;
+  }
+}

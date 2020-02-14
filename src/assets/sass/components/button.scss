@@ -9,9 +9,24 @@
   color: $alternate_font_color;
   word-break: break-all;
   text-decoration: none;
+  cursor: pointer;
 
   background-color: $button_color;
   border: none;
   border-radius: 10px;
   outline: none;
+
+  transition: $transition;
 }
+
+@media(max-width: $max_width_tablet) {
+  .button {
+    padding: 16px 20px;
+  }
+}
+
+// @media(max-width: $max_width_mobile) {
+//   .button {
+//     padding: 16px 14px;
+//   }
+// }

@@ -59,4 +59,47 @@
   &__phone {
     margin-left: auto;
   }
+
+  &__control {
+    display: none;
+  }
+}
+
+@media(max-width: $max_width_tablet) {
+  .page_header {
+    &__top {
+      display: none;
+    }
+
+    &__bottom {
+      padding: 25px 0;
+    }
+
+    &__main_nav {
+      display: none;
+    }
+
+    &__control {
+      order: -1;
+      display: block;
+      margin-right: 37px;
+    }
+  }
+}
+
+@media(max-width: $max_width_mobile) {
+  .page_header {
+    &__bottom {
+      padding: 30px 0;
+      flex-wrap: wrap;
+    }
+
+    &__control {
+      order: 0;
+    }
+
+    &__logo {
+      margin-bottom: 8px;
+    }
+  }
 }
