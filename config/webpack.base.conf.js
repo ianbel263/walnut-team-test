@@ -29,18 +29,6 @@ module.exports = {
     path: PATHS.dist,
     publicPath: "/"
   },
-  // optimization: {
-  //   splitChunks: {
-  //     cacheGroups: {
-  //       vendor: {
-  //         name: "vendors",
-  //         test: /node_modules/,
-  //         chunks: "all",
-  //         enforce: true
-  //       }
-  //     }
-  //   }
-  // },
   module: {
     rules: [
       {
@@ -75,18 +63,17 @@ module.exports = {
             loader: "css-loader",
             options: { sourceMap: true }
           },
-          // {
-          //   loader: "postcss-loader",
-          //   options: {
-          //     sourceMap: true,
-          //     config: { path: `./postcss.config.js` }
-          //   }
-          // },
+          {
+            loader: "postcss-loader",
+            options: {
+              sourceMap: true,
+              config: { path: `./postcss.config.js` }
+            }
+          },
           {
             loader: "sass-loader",
             options: {
               sourceMap: true,
-              // outputStyle: 'compressed',
             }
           }
         ]
