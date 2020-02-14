@@ -12,5 +12,16 @@
 @import "./base/wrapper.scss";
 
 // components
+@import "./components/logo.scss";
+@import "./components/button.scss";
+@import "./components/control.scss";
+@import "./components/phone.scss";
+@import "./components/site_list.scss";
+@import "./components/form.scss";
+
 
 // blocks
+@import "./blocks/container.scss";
+@import "./blocks/index_page_wrap.scss";
+@import "./blocks/page_header.scss";
+@import "./blocks/main_screen.scss";

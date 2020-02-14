@@ -1,0 +1,107 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  input[type="text"],
+  input[type="tel"] {
+    width: 407px;
+    padding: 18px 30px;
+
+    font: inherit;
+    font-size: 18px;
+    line-height: 24px;
+    color: inherit;
+
+    background-color: $input_bg_color;
+    border: 2px solid transparent;
+    border-radius: 10px;
+  }
+
+  input[type="text"] {
+    @include input_placeholder {
+      color: inherit;
+      letter-spacing: 1.7px;
+    }
+  }
+
+  input[type="tel"] {
+    @include input_placeholder {
+      color: $input_phone_placeholder_color;
+    }
+  }
+
+  &__fields {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  &__checkbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+
+    label {
+      position: relative;
+
+      padding-left: 40px;
+
+      font-size: 12px;
+      line-height: 24px;
+      letter-spacing: 0.8px;
+
+      &::before,
+      &::after {
+        top: 50%;
+
+        @include pseudo;
+      }
+
+      &::before {
+        left: 0;
+
+        width: 24px;
+        height: 24px;
+        margin-top: -12px;
+
+        background-color: $main_bg_color;
+        border-radius: 6px;
+      }
+
+      &::after {
+        left: 6px;
+
+        display: none;
+        width: 12px;
+        height: 12px;
+        margin-top: -6px;
+
+        background-color: $alternate_bg_color;
+        border-radius: 3px;
+      }
+
+      a {
+        color: $link_color;
+        text-decoration: underline;
+      }
+    }
+
+    input[type="checkbox"]:checked + label::after {
+      display: block;
+    }
+  }
+
+  &__button {
+    width: 410px;
+  }
+}

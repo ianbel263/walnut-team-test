@@ -1,0 +1,25 @@
+.site_list {
+  @include ul_reset;
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  &__item {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+    a {
+      display: block;
+      padding: 14px 0;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      color: $alternate_font_color;
+    }
+  }
+}

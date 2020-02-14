@@ -10,17 +10,17 @@
     <div class="wrapper">
       <div class="wrapper__content">
         <div class="index_page_wrap">
-          <header class="page_header">
+          <header class="page_header container">
             <div class="page_header__top">
               <p>Снег и лед могут появится неожидано, <b>поэтому мы работаем 24/7</b></p>
-              <p>Мы открыты для предложений и идей — <a href="mailto:hello@snow-alp.ru" title="Написать нам">hello@snow-alp.ru</a></p>
-              <p>Мы легко можем перезвонить сами — <a href="#" title="Заказать обратный звонок">обратный звонок</a></p>
+              <p>Мы открыты для предложений и идей — <a class="page_header__link" href="mailto:hello@snow-alp.ru" title="Написать нам">hello@snow-alp.ru</a></p>
+              <p>Мы легко можем перезвонить сами — <a class="page_header__link page_header__link--feedback" href="#" title="Заказать обратный звонок">обратный звонок</a></p>
             </div>
             <div class="page_header__bottom">
-              <div class="page_header__logo logo">
-                <h2><span>Snow</span> Alp</h2>
+              <a class="page_header__logo logo" href="#">
+                <h2><span>Snow </span>Alp</h2>
                 <p>Чистка снега и наледи с кровли</p>
-              </div>
+              </a>
               <nav class="page_header__main_nav main_nav">
                 <ul class="main_nav__list site_list">
                   <li class="site_list__item">
@@ -37,17 +37,17 @@
                   </li>
                 </ul>
               </nav>
-              <div class="page_header__phone phone">
-                <p>+7 495 <span>335 53 53</span></p>
-              </div>
+              <a class="page_header__phone phone" href="tel:+74953355353">
+                +7 495 <span>335 53 53</span>
+              </a>
             </div>
           </header>
           <section class="main_screen">
-            <div class="main_screen__inner">
-              <h1></h1>
-              <p></p>
+            <div class="main_screen__inner container">
+              <h1>Очистка снега с крыш</h1>
+              <p>Промышленными альпинистами от 25 руб/м2</p>
               <div class="main_screen__form_request form">
-                <p></p>
+                <p>Оставьте заявку — в течение часа к вам выедет специалист</p>
                 <form action="#" method="post">
                   <div class="form__fields">
                     <label aria-label="Ваше имя и фамилия">
@@ -58,12 +58,12 @@
                     </label>
                   </div>
                   <div class="form__checkbox">
-                    <input type="checkbox" id="agree" name="agree" checked>
+                    <input class="visually_hidden" type="checkbox" id="agree" name="agree" checked>
                     <label for="agree">
                       Я согласен с <a href="#">политикой конфиденциальности</a> и даю согласие на обработку персональных данных
                     </label>
                   </div>
-                  <button type="submit">Отправить заявку</button>
+                  <button class="form__button button" type="submit">Отправить заявку</button>
                 </form>
               </div>
             </div>

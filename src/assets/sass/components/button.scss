@@ -1,0 +1,17 @@
+.button {
+  padding: 20px;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  vertical-align: middle;
+  text-align: center;
+  color: $alternate_font_color;
+  word-break: break-all;
+  text-decoration: none;
+
+  background-color: $button_color;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}

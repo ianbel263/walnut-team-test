@@ -1,9 +1,12 @@
 // fonts
 $main_font: "Montserrat", Arial, sans-serif;
+$logo_font: "Impact", Verdana, sans-serif;
 
 // font colors
 $main_font_color: #000000;
+$alternate_font_color: #ffffff;
 $main_title_bg_color: #ffe640;
+$logo_sec_font_color: #50b1d7;
 
 // bg colors
 $main_bg_color: #ffffff;
@@ -15,6 +18,7 @@ $index_page_wrapper_bg_color: #61484a;
 // links/buttons colors
 $link_color: $alternate_bg_color;
 $link_hover_color: $main_title_bg_color;
+$button_color: $alternate_bg_color;
 
 //inputs colors
 $input_bg_color: rgba(255, 255, 255, 0.25);
@@ -32,12 +36,14 @@ $transition: all 0.3s;
 
 // Значения ширины контента
 $max_width: 1920px;
-$max_width_desktop: 1200px;
 $only_desktop: 1024px;
 $max_width_tablet: 1023px;
-$min_width_mobile: 320px;
 $max_width_mobile: 767px;
+$min_width_mobile: 320px;
 $no_mobile_width: 768px; // для ховеров
+
+$max_width_container: 1320px;
+$breakpoint_desktop: 1210px;
 
 // Ретинизация
 $retina_dpi: 144dpi;

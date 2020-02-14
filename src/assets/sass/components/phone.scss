@@ -1,0 +1,11 @@
+.phone {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 48px;
+  color: $alternate_font_color;
+  white-space: nowrap;
+
+  span {
+    color: $logo_sec_font_color;
+  }
+}
