@@ -9,7 +9,6 @@ const PATHS = {
   dist: path.join(__dirname, "../public"),
   assets: "assets/"
 };
-console.log('PATHS', PATHS)
 
 // Pages const for HtmlWebpackPlugin
 const PAGES_DIR = PATHS.src;
@@ -63,6 +62,12 @@ module.exports = {
             loader: "css-loader",
             options: { sourceMap: true }
           },
+          // {
+          //   loader: 'resolve-url-loader',
+          //   options: {
+          //     root: PATHS.src
+          //   }
+          // },
           {
             loader: "postcss-loader",
             options: {

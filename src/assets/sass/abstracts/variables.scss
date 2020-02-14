@@ -1,5 +1,5 @@
 // fonts
-$main_font: Arial, sans-serif;
+$main_font: "Montserrat", Arial, sans-serif;
 
 // font colors
 $main_font_color: #000000;
@@ -12,7 +12,6 @@ $main_bg_color: #ffffff;
 // others variables
 $transition: all 0.3s;
 
-
 // Значения ширины контента
 $max_width: 1920px;
 $max_width_desktop: 1200px;
@@ -21,11 +20,6 @@ $max_width_tablet: 1023px;
 $min_width_mobile: 320px;
 $max_width_mobile: 767px;
 $no_mobile_width: 768px; // для ховеров
-
-// Значения вьюпортов
-$width_viewport_desktop: 1024px;
-$width_viewport_tablet: 1023px;
-$width_viewport_mobile: 767px;
 
 // Ретинизация
 $retina_dpi: 144dpi;
