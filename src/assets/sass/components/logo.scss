@@ -24,6 +24,7 @@
 
     span {
       color: $logo_sec_font_color;
+      transition: $transition;
     }
   }
 
@@ -68,3 +69,21 @@
     }
   }
 }
+
+@media(min-width: $no_mobile_width) {
+  .logo {
+    &:hover,
+    &:focus {
+      span {
+        color: $link_hover_color;
+      }
+    }
+
+    &:active {
+      span {
+        color: $logo_sec_font_color;
+      }
+    }
+  }
+}
+

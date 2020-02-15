@@ -13,12 +13,27 @@
     &:last-child {
       margin-right: 0;
     }
+
     a {
       display: block;
       padding: 14px 0;
       font-weight: 600;
       font-size: 16px;
       line-height: 20px;
+      color: $alternate_font_color;
+      transition: $transition;
+    }
+  }
+}
+
+@media(min-width: $no_mobile_width) {
+  .site_list__item {
+    a:hover,
+    a:focus {
+      color: $link_hover_color;
+    }
+
+    a:active {
       color: $alternate_font_color;
     }
   }

@@ -9,6 +9,7 @@
 
   span {
     color: $logo_sec_font_color;
+    transition: $transition;
   }
 }
 
@@ -23,3 +24,21 @@
     font-size: 24px;
   }
 }
+
+@media(min-width: $no_mobile_width) {
+  .phone {
+    &:hover,
+    &:focus {
+      span {
+        color: $link_hover_color;
+      }
+    }
+
+    &:active {
+      span {
+        color: $logo_sec_font_color;
+      }
+    }
+  }
+}
+

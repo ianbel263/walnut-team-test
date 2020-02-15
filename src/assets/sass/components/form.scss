@@ -25,18 +25,27 @@
     border-radius: 10px;
 
     transition: $transition;
+
+    @include input_placeholder {
+      color: $input_phone_placeholder_color;
+    }
+
+    &:hover {
+      background-color: $input_hover_bg_color;
+      @include input_placeholder {
+        color: $alternate_font_color;
+      }
+    }
+
+    &:focus,
+    &:active {
+      box-shadow: 0 0 12px rgba(80, 177, 215, 0.7);
+    }
   }
 
   input[type="text"] {
     @include input_placeholder {
-      color: inherit;
       letter-spacing: 1.7px;
-    }
-  }
-
-  input[type="tel"] {
-    @include input_placeholder {
-      color: $input_phone_placeholder_color;
     }
   }
 
@@ -68,9 +77,9 @@
 
       &::before,
       &::after {
-        top: 50%;
-
         @include pseudo;
+
+        top: 50%;
       }
 
       &::before {

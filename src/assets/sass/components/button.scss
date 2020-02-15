@@ -25,8 +25,17 @@
   }
 }
 
-// @media(max-width: $max_width_mobile) {
-//   .button {
-//     padding: 16px 14px;
-//   }
-// }
+@media(min-width: $no_mobile_width) {
+  .button {
+    &:hover,
+    &:focus {
+      color: $main_font_color;
+      background-color: $button_hover_color;
+    }
+
+    &:active {
+      color: $alternate_font_color;
+      background-color: $button_color;
+    }
+  }
+}
