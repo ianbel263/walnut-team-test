@@ -17,6 +17,10 @@
   outline: none;
 
   transition: $transition;
+
+  &--modal {
+    background-color: $button_modal_bg_color;
+  }
 }
 
 @media(max-width: $max_width_tablet) {
@@ -36,6 +40,18 @@
     &:active {
       color: $alternate_font_color;
       background-color: $button_color;
+    }
+
+    &--modal {
+      &:hover,
+      &:focus {
+        color: $alternate_font_color;
+        background-color: $button_modal_hover_bg_color;
+      }
+
+      &:active {
+        background-color: $button_modal_bg_color;
+      }
     }
   }
 }
