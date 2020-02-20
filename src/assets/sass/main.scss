@@ -5,6 +5,7 @@
 @import "./abstracts/mixins.scss";
 @import "./abstracts/variables.scss";
 @import "./abstracts/visually_hidden.scss";
+@import "./abstracts/animations.scss";
 
 // base
 @import "./base/fonts.scss";
@@ -16,6 +17,7 @@
 @import "./components/button.scss";
 @import "./components/control.scss";
 @import "./components/phone.scss";
+@import "./components/main_nav.scss";
 @import "./components/site_list.scss";
 @import "./components/form.scss";
 

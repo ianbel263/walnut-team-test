@@ -23,6 +23,7 @@ $button_hover_color: $main_title_bg_color;
 $button_modal_bg_color: #313131;
 $button_modal_hover_bg_color: #484848;
 $control_modal_hover_color: #989898;
+$control_main_nav_color: #555555;
 
 //inputs colors
 $input_bg_color: rgba(255, 255, 255, 0.25);
@@ -30,6 +31,8 @@ $input_phone_placeholder_color: rgba(255, 255, 255, 0.3);
 
 $input_hover_bg_color: rgba(255, 255, 255, 0.4);
 $input_hover_phone_placeholder_color: #ffffff;
+
+$input_invalid_border_color: #ff0000;
 
 // shadows
 $text_shadow: 2.121px 2.121px 3px rgba(0, 0, 0, 0.5);

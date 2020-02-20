@@ -13,17 +13,4 @@
   &__footer {
     flex: 0 0 auto;
   }
-
-  &--modal_opened {
-    width: 100vw;
-    overflow: hidden;
-  }
-}
-
-@media (max-width: $max_width_mobile) {
-  .wrapper {
-    &--modal_opened {
-      position: fixed;
-    }
-  }
 }

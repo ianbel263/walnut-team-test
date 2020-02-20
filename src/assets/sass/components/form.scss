@@ -41,6 +41,10 @@
     &:active {
       box-shadow: 0 0 12px rgba(80, 177, 215, 0.7);
     }
+
+    // &:invalid {
+    //   border: 2px solid $input_invalid_border_color;
+    // }
   }
 
   input[type="text"] {
@@ -118,6 +122,10 @@
 
   &__button {
     width: 410px;
+  }
+
+  .modal__label--invalid input {
+    border: 2px solid $input_invalid_border_color;
   }
 }
 

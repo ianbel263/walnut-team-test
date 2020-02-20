@@ -2,6 +2,7 @@
   position: fixed;
   top: 10%;
   left: 50%;
+  z-index: 100;
 
   display: flex;
   flex-direction: column;
@@ -58,6 +59,11 @@
     letter-spacing: 1.1px;
   }
 
+  p.modal__invalid {
+    margin-top: 20px;
+    display: none;
+  }
+
   &__form {
     width: 100%;
 
@@ -93,13 +99,35 @@
     right: 40px;
   }
 
-  &__invalid {
-    display: none;
-  }
-
   &--success {
     p {
       width: 100%;
+    }
+  }
+}
+
+@media(max-width: $max_width_mobile) {
+  .modal {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin-left: 0;
+    padding-top: 100px;
+
+    h2,
+    p {
+      width: 290px;
+    }
+
+    &__form {
+      .form__fields {
+        align-items: center;
+      }
+      .form__fields label,
+      .form__button {
+        width: 290px;
+      }
     }
   }
 }

@@ -33,3 +33,14 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.body_hidden {
+  width: 100vw;
+  overflow: hidden;
+}
+
+@media (max-width: $max_width_mobile) {
+  .body_hidden {
+    position: fixed;
+  }
+}
