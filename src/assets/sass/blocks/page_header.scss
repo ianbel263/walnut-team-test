@@ -8,7 +8,7 @@
       margin: 0;
       margin-right: 10px;
 
-      font-size: 12px;
+      font-size: 0.67em;
       line-height: 14px;
       letter-spacing: 0.65px;
 
@@ -25,7 +25,7 @@
       transition: $transition;
 
       @media(max-width: $breakpoint_desktop) {
-        font-size: 11px;
+        font-size: 0.61em;
         letter-spacing: normal;
       }
     }
@@ -61,12 +61,8 @@
   &__control {
     display: none;
   }
-}
 
-@media(max-width: $max_width_tablet) {
-  .page_header {
-    // position: relative;
-
+  @include tablet {
     &__top {
       padding-top: 20px;
       padding-bottom: 30px;
@@ -75,7 +71,7 @@
       p {
         margin-right: 0;
         margin-bottom: 30px;
-        font-size: 12px;
+        font-size: 0.66em;
         line-height: 16px;
 
         &:last-child {
@@ -98,10 +94,8 @@
       margin-right: 37px;
     }
   }
-}
 
-@media(max-width: $max_width_mobile) {
-  .page_header {
+  @include mobile {
     &__bottom {
       padding: 30px 0;
       flex-wrap: wrap;
@@ -115,19 +109,19 @@
       margin-bottom: 8px;
     }
   }
-}
 
-@media(min-width: $no_mobile_width) {
-  .page_header__link {
-    &:hover,
-    &:focus {
-      color: $link_hover_color;
-      border-color: $link_hover_color;
-    }
+  @include hovers {
+    .page_header__link {
+      &:hover,
+      &:focus {
+        color: $link_hover_color;
+        border-color: $link_hover_color;
+      }
 
-    &:active {
-      color: $link_color;
-      border-color: $link_color;
+      &:active {
+        color: $link_color;
+        border-color: $link_color;
+      }
     }
   }
 }

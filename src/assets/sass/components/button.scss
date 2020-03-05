@@ -2,7 +2,7 @@
   padding: 20px;
 
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1em;
   line-height: 24px;
   vertical-align: middle;
   text-align: center;
@@ -21,16 +21,12 @@
   &--modal {
     background-color: $button_modal_bg_color;
   }
-}
 
-@media(max-width: $max_width_tablet) {
-  .button {
+  @include tablet {
     padding: 16px 20px;
   }
-}
 
-@media(min-width: $no_mobile_width) {
-  .button {
+  @include hovers {
     &:hover,
     &:focus {
       color: $main_font_color;

@@ -1,4 +1,5 @@
 import {checkPhoneNumberValidity} from './form';
+import {isMenuOpened} from './main_nav';
 
 const ESC_KEY_CODE = 27;
 const TIMEOUT_HIDE_POPUP = 590;
@@ -59,20 +60,17 @@ const openPopup = (popup) => {
   popup.classList.add(`modal--opened`);
 };
 
-const closePopup = (isClickOnPopup = false) => {
+const closePopup = () => {
   if (popupsAll.length < 1 || !overlay) {
     return;
   }
   popupsAll.forEach((popup) => {
-    overlay.classList.remove(`overlay--show`);
+    if (!isMenuOpened) {
+      overlay.classList.remove(`overlay--show`);
+    }
     popup.classList.remove(`modal--opened`);
     popup.classList.add(`modal--closed`);
-
-    if (!isClickOnPopup) {
-      setTimeout(hidePopups, TIMEOUT_HIDE_POPUP);
-    } else {
-      hidePopups();
-    }
+    setTimeout(hidePopups, TIMEOUT_HIDE_POPUP);
   });
 
   document.removeEventListener(`keydown`, onEscPress);
@@ -82,11 +80,13 @@ const hidePopups = () => {
   popupsAll.forEach((popup) => {
     popup.classList.add(`modal--hidden`);
   });
-  document.body.style.paddingRight = ``;
-  document.body.classList.remove(`body_hidden`);
+  if (!isMenuOpened) {
+    document.body.style.paddingRight = ``;
+    document.body.classList.remove(`body_hidden`);
+  }
   if (document.body.offsetWidth <= MOBILE_MAX_WIDTH) {
     window.scrollTo(0, parseInt(scrollY || `0`, 10));
   }
 };
 
-export {openPopup, closePopup};
+export {openPopup, closePopup, overlay, getScrollbarWidth};

@@ -16,7 +16,7 @@
     padding: 18px 30px;
 
     font: inherit;
-    font-size: 18px;
+    font-size: 1em;
     line-height: 24px;
     color: inherit;
 
@@ -41,10 +41,6 @@
     &:active {
       box-shadow: 0 0 12px rgba(80, 177, 215, 0.7);
     }
-
-    // &:invalid {
-    //   border: 2px solid $input_invalid_border_color;
-    // }
   }
 
   input[type="text"] {
@@ -127,10 +123,8 @@
   .modal__label--invalid input {
     border: 2px solid $input_invalid_border_color;
   }
-}
 
-@media(max-width: $max_width_tablet) {
-  .form {
+  @include tablet {
     &__fields {
       label {
         width: calc(50% - 15px);
@@ -160,10 +154,8 @@
       }
     }
   }
-}
 
-@media(max-width: $max_width_mobile) {
-  .form {
+  @include mobile {
     form {
       max-width: none;
     }
@@ -196,7 +188,7 @@
     &__checkbox {
       label {
         max-width: 280px;
-        font-size: 10px;
+        font-size: 0.56;
         line-height: 14px;
         align-self: flex-start;
 

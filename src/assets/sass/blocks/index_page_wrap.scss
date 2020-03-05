@@ -9,10 +9,8 @@
   @media (min-resolution: $retina_dpi), (min-resolution: $retina_dppx) {
     background-image: url("../img/bg_desktop@2x.png");
   }
-}
 
-@media(max-width: $max_width_tablet) {
-  .index_page_wrap {
+  @include tablet {
     background-size: cover;
     background-image: url("../img/bg_tablet@1x.png");
 
@@ -20,10 +18,8 @@
       background-image: url("../img/bg_tablet@2x.png");
     }
   }
-}
 
-@media(max-width: $max_width_mobile) {
-  .index_page_wrap {
+  @include mobile {
     background-size: cover;
     background-image: url("../img/bg_mobile@1x.png");
 

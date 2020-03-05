@@ -1,22 +1,15 @@
 .container {
   width: 100%;
   max-width: $max_width_container;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
+  margin: 0 auto;
+  padding: 0 15px;
 
-@media(max-width: $max_width_tablet) {
-  .container {
+  @include tablet {
     max-width: none;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 0 40px;
   }
-}
 
-@media(max-width: $max_width_mobile) {
-  .container {
+  @include mobile {
     min-width: 290px;
     max-width: 80%;
     padding: 0;

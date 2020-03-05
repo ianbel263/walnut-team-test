@@ -56,29 +56,28 @@
   &--main_nav::after {
     background-color: $control_main_nav_color;
   }
-}
 
-@media(min-width: $no_mobile_width) {
-  .control--modal:hover,
-  .control--modal:focus {
-    &::before,
-    &::after {
-      background-color: $control_modal_hover_color;
+  @include hovers {
+    .control--modal:hover,
+    .control--modal:focus {
+      &::before,
+      &::after {
+        background-color: $control_modal_hover_color;
+      }
+    }
+
+    .control--modal:active {
+      &::before,
+      &::after {
+        background-color: $main_bg_color;
+      }
+    }
+
+    .control--main_nav:active {
+      &::before,
+      &::after {
+        background-color: $control_main_nav_color;
+      }
     }
   }
-
-  .control--modal:active {
-    &::before,
-    &::after {
-      background-color: $main_bg_color;
-    }
-  }
-
-  .control--main_nav:active {
-    &::before,
-    &::after {
-      background-color: $control_main_nav_color;
-    }
-  }
-
 }

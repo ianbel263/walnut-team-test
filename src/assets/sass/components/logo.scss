@@ -37,10 +37,8 @@
 
     transition: inherit;
   }
-}
 
-@media(max-width: $max_width_tablet) {
-  .logo {
+  @include tablet {
     width: 270px;
 
     h2 {
@@ -52,10 +50,8 @@
       padding-top: 0;
     }
   }
-}
 
-@media(max-width: $max_width_mobile) {
-  .logo {
+  @include mobile {
     width: 100%;
 
     h2 {
@@ -68,10 +64,8 @@
       font-size: 14px;
     }
   }
-}
 
-@media(min-width: $no_mobile_width) {
-  .logo {
+  @include hovers {
     &:hover,
     &:focus {
       span {
@@ -86,4 +80,3 @@
     }
   }
 }
-

@@ -1,6 +1,6 @@
 .phone {
   font-weight: 600;
-  font-size: 36px;
+  font-size: 2em;
   line-height: 48px;
   color: $alternate_font_color;
   white-space: nowrap;
@@ -11,22 +11,16 @@
     color: $logo_sec_font_color;
     transition: $transition;
   }
-}
 
-@media(max-width: $max_width_tablet) {
-  .phone {
-    font-size: 30px;
+  @include tablet {
+    font-size: 1.67em;
   }
-}
 
-@media(max-width: $max_width_mobile) {
-  .phone {
-    font-size: 24px;
+  @include mobile {
+    font-size: 1.33em;
   }
-}
 
-@media(min-width: $no_mobile_width) {
-  .phone {
+  @include hovers {
     &:hover,
     &:focus {
       span {
@@ -41,4 +35,3 @@
     }
   }
 }
-
