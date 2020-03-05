@@ -9,19 +9,19 @@ const buildWebpackConfig = merge(baseWebpackConfig, {
   mode: "production",
   plugins: [
     new CleanWebpackPlugin(),
-    // new ImageminPlugin({
-    //   test: /\.(jpe?g|png|gif|svg)$/i,
-    //   pngquant: {
-    //     quality: '80-100',
-    //     speed: 4
-    //   },
-    //   // plugins: [
-    //   //   imageminMozjpeg({
-    //   //     quality: 70,
-    //   //     progressive: true
-    //   //   })
-    //   // ]
-    // }),
+    new ImageminPlugin({
+      test: /\.(jpe?g|png|gif|svg)$/i,
+      pngquant: {
+        quality: '80-100',
+        speed: 4
+      },
+      // plugins: [
+      //   imageminMozjpeg({
+      //     quality: 70,
+      //     progressive: true
+      //   })
+      // ]
+    }),
   ]
 });
 

@@ -26,7 +26,7 @@ module.exports = {
   output: {
     filename: `${PATHS.assets}js/[name].js`,
     path: PATHS.dist,
-    publicPath: "./"
+    publicPath: ""
   },
   module: {
     rules: [
@@ -60,14 +60,11 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
-            options: { sourceMap: true }
+            options: {
+              sourceMap: true,
+              url: false
+            }
           },
-          // {
-          //   loader: 'resolve-url-loader',
-          //   options: {
-          //     root: PATHS.src
-          //   }
-          // },
           {
             loader: "postcss-loader",
             options: {
